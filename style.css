@@ -1,0 +1,86 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color:black;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+    background-image: url(images/pngtree-summer-landscape-theme-picture-image_1302113.jpg);
+    /* background-image: linear-gradient(purple,violet,rgb(66, 66, 165)); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.container{
+    position: relative;
+    /* border: 2px solid black; */
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* background-image: linear-gradient(rgb(255, 0, 157),rgba(136, 0, 255, 0.877),rgba(255, 0, 38, 0.973)); */
+    background-repeat: no-repeat;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 30px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg*var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+.clock span b{
+    transform: rotate(calc(-30deg *var(--i)));
+    display: inline-block;
+    font-size: 25px;
+}
+.clock::before{
+    content:'' ;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 2;
+}
+.hand1{
+    position: absolute;
+    height: 25%;
+    width: 4px;
+    background-color: #841313;
+    left: 48.5%;
+    top: 75px;
+    transform-origin: bottom;
+}
+.hand2{
+    position: absolute;
+    height: 40%;
+    width: 4px;
+    left: 48.5%;
+    background-color: #844213;
+    top: 33px;
+    transform-origin: bottom;
+
+}
+.hand3{
+    position: absolute;
+    height: 40%;
+    width: 4px;
+    left: 48.5%;
+    background-color: #0a0a0a;
+    top: 32px;
+    transform-origin: bottom;
+
+}
